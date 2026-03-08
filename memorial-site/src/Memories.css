@@ -1,0 +1,186 @@
+/* ========================================
+   MEMORIES PAGE
+   ======================================== */
+
+.mem-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(250, 248, 245, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(180, 213, 224, 0.3);
+  box-shadow: 0 2px 20px rgba(44, 62, 90, 0.06);
+}
+
+.mem-nav-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mem-nav-back {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--navy-light);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.mem-nav-back:hover {
+  color: var(--gold);
+}
+
+.mem-nav-title {
+  font-family: var(--font-hindi);
+  font-size: 0.9rem;
+  color: var(--gold);
+  font-weight: 500;
+}
+
+/* Hero / header area */
+.mem-hero {
+  padding: 7rem 1.5rem 3rem;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    var(--cream) 0%,
+    #e8f0f4 100%
+  );
+}
+
+.mem-hero-title {
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.25rem;
+}
+
+.mem-hero-hindi {
+  font-family: var(--font-hindi);
+  font-size: 1.4rem;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.mem-hero-subtitle {
+  font-size: 1rem;
+  color: var(--navy-light);
+  max-width: 500px;
+  margin: 0 auto 0.75rem;
+  line-height: 1.6;
+}
+
+.mem-hero-subtitle-hindi {
+  font-family: var(--font-hindi);
+  font-size: 1rem;
+  color: var(--gold);
+  max-width: 500px;
+  margin: 0 auto 1.75rem;
+  line-height: 1.8;
+}
+
+.mem-share-btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: var(--gold);
+  color: white;
+  border-radius: 8px;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.mem-share-btn:hover {
+  background: #b8963e;
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Content area */
+.mem-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 5rem;
+}
+
+.mem-status {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--navy-light);
+  font-style: italic;
+}
+
+.mem-grid {
+  columns: 1;
+  column-gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .mem-grid {
+    columns: 2;
+  }
+}
+
+@media (min-width: 960px) {
+  .mem-grid {
+    columns: 3;
+  }
+}
+
+.mem-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid rgba(180, 213, 224, 0.25);
+  box-shadow: 0 2px 12px rgba(44, 62, 90, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  break-inside: avoid;
+  margin-bottom: 1.25rem;
+}
+
+.mem-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(44, 62, 90, 0.08);
+}
+
+.mem-card-text {
+  font-size: 0.95rem;
+  color: var(--navy);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.mem-card-author {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.mem-card-name {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.mem-card-rel {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--gold);
+  background: rgba(196, 163, 90, 0.12);
+  padding: 0.15rem 0.6rem;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}

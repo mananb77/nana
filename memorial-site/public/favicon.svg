@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Flame outer -->
+  <ellipse cx="32" cy="18" rx="7" ry="14" fill="#ff9500" opacity="0.9"/>
+  <!-- Flame inner -->
+  <ellipse cx="32" cy="20" rx="4" ry="9" fill="#ffe066"/>
+  <!-- Flame core -->
+  <ellipse cx="32" cy="22" rx="2" ry="5" fill="#fff8dc"/>
+  <!-- Wick -->
+  <rect x="31" y="28" width="2" height="5" rx="1" fill="#444"/>
+  <!-- Bowl top rim -->
+  <ellipse cx="32" cy="34" rx="18" ry="6" fill="#C4A35A"/>
+  <!-- Bowl body -->
+  <path d="M14 34 Q14 52 32 52 Q50 52 50 34 Z" fill="#b8943e"/>
+  <!-- Bowl inner highlight -->
+  <ellipse cx="32" cy="34" rx="14" ry="4" fill="#e8c96a" opacity="0.5"/>
+</svg>
