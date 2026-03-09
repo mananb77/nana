@@ -1,16 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Glow -->
+  <circle cx="32" cy="20" r="14" fill="#FFD700" opacity="0.12"/>
   <!-- Flame outer -->
-  <ellipse cx="32" cy="18" rx="7" ry="14" fill="#ff9500" opacity="0.9"/>
-  <!-- Flame inner -->
-  <ellipse cx="32" cy="20" rx="4" ry="9" fill="#ffe066"/>
+  <path d="M32 6 Q27 16 27 22 Q27 28 32 28 Q37 28 37 22 Q37 16 32 6Z" fill="#FF8C00"/>
+  <!-- Flame middle -->
+  <path d="M32 10 Q29 17 29 22 Q29 27 32 27 Q35 27 35 22 Q35 17 32 10Z" fill="#FFD700"/>
   <!-- Flame core -->
-  <ellipse cx="32" cy="22" rx="2" ry="5" fill="#fff8dc"/>
+  <path d="M32 14 Q31 19 31 22 Q31 25 32 25 Q33 25 33 22 Q33 19 32 14Z" fill="#FFFACD"/>
   <!-- Wick -->
-  <rect x="31" y="28" width="2" height="5" rx="1" fill="#444"/>
-  <!-- Bowl top rim -->
-  <ellipse cx="32" cy="34" rx="18" ry="6" fill="#C4A35A"/>
-  <!-- Bowl body -->
-  <path d="M14 34 Q14 52 32 52 Q50 52 50 34 Z" fill="#b8943e"/>
-  <!-- Bowl inner highlight -->
-  <ellipse cx="32" cy="34" rx="14" ry="4" fill="#e8c96a" opacity="0.5"/>
+  <rect x="31" y="27" width="2" height="6" rx="1" fill="#4A3728"/>
+  <!-- Oil surface -->
+  <ellipse cx="32" cy="34" rx="13" ry="3.5" fill="#8B4513" opacity="0.6"/>
+  <!-- Diya bowl rim -->
+  <ellipse cx="32" cy="34" rx="18" ry="6" fill="#CD853F"/>
+  <!-- Diya bowl body -->
+  <path d="M14 34 Q16 52 32 54 Q48 52 50 34 Z" fill="#DAA520"/>
+  <!-- Bowl highlight -->
+  <ellipse cx="32" cy="34" rx="15" ry="4.5" fill="#E8C96A" opacity="0.5"/>
+  <!-- Oil in bowl -->
+  <ellipse cx="32" cy="34" rx="12" ry="3" fill="#8B6914" opacity="0.4"/>
 </svg>

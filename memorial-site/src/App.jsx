@@ -73,11 +73,17 @@ function Hero() {
         <p className="hero-name-english fade-in">Umakant Bhargava</p>
         <p className="hero-years fade-in">November 3, 1936 &ndash; April 28, 2021</p>
         <p className="hero-subtitle fade-in">
-          Father, Engineer, Teacher, Athlete &mdash; The Strongest Man We Knew
+          Father, Engineer, Teacher, Pillar &mdash; The Strongest Man We Knew
         </p>
-        <p className="hero-subtitle hero-subtitle-hindi fade-in">
-          पिता, इंजीनियर, शिक्षक, खिलाड़ी &mdash; सबसे मज़बूत इंसान जो हमने जाना
-        </p>
+
+        <div className="hero-quote fade-in">
+          <p className="hero-quote-hindi">
+            &ldquo;जहाँ कॉर्नर्स कट किए, वो फेल करेगा ही करेगा&rdquo;
+          </p>
+          <p className="hero-quote-english">
+            &ldquo;Wherever corners are cut, it will fail &mdash; it definitely will fail.&rdquo;
+          </p>
+        </div>
 
         <div className="hero-links fade-in">
           <Link to="/lifestory" className="hero-link hero-link-primary">
@@ -157,7 +163,8 @@ function Bio() {
         <p className="section-title-hindi fade-in">वो कौन थे</p>
 
         <p className="bio-text fade-in">
-          Before he was an engineer, he was a father. A man who didn&rsquo;t say
+          He was an engineer, and then a father &mdash; and he carried both roles
+          with equal dedication for the rest of his life. A man who didn&rsquo;t say
           much but showed everything through what he did. He woke up early, exercised
           daily, and never broke his routine &mdash; because he believed the body
           and the mind had to be kept strong, always. He was the most mentally
@@ -170,7 +177,8 @@ function Bio() {
         </p>
 
         <p className="bio-text bio-text-hindi fade-in">
-          इंजीनियर बनने से पहले, वे एक पिता थे। एक ऐसे व्यक्ति जो ज़्यादा
+          वे पहले इंजीनियर बने, फिर पिता &mdash; और दोनों भूमिकाएँ उन्होंने
+          जीवन भर पूरी निष्ठा से निभाईं। एक ऐसे व्यक्ति जो ज़्यादा
           बोलते नहीं थे, लेकिन अपने हर काम से सब कुछ दिखाते थे। सुबह जल्दी
           उठते, रोज़ व्यायाम करते, और अपनी दिनचर्या कभी नहीं तोड़ते &mdash;
           क्योंकि उनका मानना था कि शरीर और मन दोनों को हमेशा मज़बूत रखना
@@ -218,17 +226,77 @@ function FamilyTree() {
         <p className="section-title-hindi fade-in">हमारा परिवार</p>
 
         <div className="ft fade-in">
+          {/* Generation 1: Nana & Nani */}
           <div className="ft-gen ft-gen-center">
             <div className="ft-node ft-node-highlight">
               <span className="ft-name">Umakant Bhargava</span>
               <span className="ft-name-hindi">उमाकांत भार्गव</span>
               <span className="ft-years">1936 &ndash; 2021</span>
             </div>
+            <span className="ft-amp">&amp;</span>
+            <div className="ft-node ft-node-highlight">
+              <span className="ft-name">Krishna Bhargava</span>
+              <span className="ft-name-hindi">कृष्णा भार्गव</span>
+              <span className="ft-years">1940 &ndash; 2021</span>
+            </div>
           </div>
 
-          <p className="ft-sibling-label" style={{ marginTop: '2rem', opacity: 0.6, fontStyle: 'italic' }}>
-            Family details to be added
-          </p>
+          <div className="ft-connector" />
+
+          {/* Generation 2 & 3: Daughters, spouses, grandchildren */}
+          <div className="ft-branches">
+            {/* Branch 1: Anshu & Ravi */}
+            <div className="ft-branch">
+              <div className="ft-couple">
+                <div className="ft-node">
+                  <span className="ft-name">Anshu</span>
+                  <span className="ft-name-hindi">अंशु</span>
+                </div>
+                <span className="ft-amp">&amp;</span>
+                <div className="ft-node">
+                  <span className="ft-name">Ravi Bhargava</span>
+                  <span className="ft-name-hindi">रवि भार्गव</span>
+                </div>
+              </div>
+              <div className="ft-connector ft-connector-sm" />
+              <div className="ft-grandchildren">
+                <div className="ft-leaf">
+                  <span className="ft-name">Ankita</span>
+                  <span className="ft-name-hindi">अंकिता</span>
+                </div>
+                <div className="ft-leaf">
+                  <span className="ft-name">Rishabh</span>
+                  <span className="ft-name-hindi">ऋषभ</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Branch 2: Aparna & Harsh */}
+            <div className="ft-branch">
+              <div className="ft-couple">
+                <div className="ft-node">
+                  <span className="ft-name">Aparna &ldquo;Bebu&rdquo;</span>
+                  <span className="ft-name-hindi">अपर्णा &ldquo;बेबू&rdquo;</span>
+                </div>
+                <span className="ft-amp">&amp;</span>
+                <div className="ft-node">
+                  <span className="ft-name">Harsh</span>
+                  <span className="ft-name-hindi">हर्ष</span>
+                </div>
+              </div>
+              <div className="ft-connector ft-connector-sm" />
+              <div className="ft-grandchildren">
+                <div className="ft-leaf">
+                  <span className="ft-name">Naman</span>
+                  <span className="ft-name-hindi">नमन</span>
+                </div>
+                <div className="ft-leaf">
+                  <span className="ft-name">Manan</span>
+                  <span className="ft-name-hindi">मनन</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -774,22 +842,159 @@ function Values() {
 
 function Gallery() {
   const base = import.meta.env.BASE_URL;
-  const photos = [
+
+  const sections = [
     {
-      src: `${base}photos/IMG_2012.JPG`,
-      alt: 'Nana — Umakant Bhargava',
+      heading: 'The Early Years',
+      headingHindi: 'शुरुआती दिन',
+      subtitle: 'A young family in Bhopal. Nana and Nani — perfect husband and wife from the very beginning. Their model relationship became the foundation for everything that followed.',
+      photos: [
+        {
+          src: `${base}photos/Nana Nani Daughters Small.jpg`,
+          alt: 'Young Nana & Nani with their two small daughters',
+          label: 'A young family — Nana & Nani with their two little daughters',
+        },
+      ],
     },
     {
-      src: `${base}photos/DSC_0244.JPG`,
-      alt: 'Nana — family photo',
+      heading: 'Exploring the World Together',
+      headingHindi: 'साथ-साथ दुनिया देखी',
+      subtitle: 'They loved to travel and see the world side by side. Mountains, waterfalls, deserts — wherever the road led, they walked it together. The perfect pair on every adventure.',
+      photos: [
+        {
+          src: `${base}photos/Nana Nani Flowers.jpg`,
+          alt: 'Nana & Nani together at a mountain overlook with flowers',
+          label: 'Mountains and wildflowers — exploring nature together',
+        },
+        {
+          src: `${base}photos/Nana Nani Waterfall.jpg`,
+          alt: 'Nana & Nani at a waterfall',
+          label: 'Chasing waterfalls — side by side through every journey',
+        },
+        {
+          src: `${base}photos/Nana Nani Camel Riding.jpg`,
+          alt: 'Nana & Nani riding a camel in Rajasthan',
+          label: 'Camel ride in Rajasthan — always up for an adventure',
+        },
+        {
+          src: `${base}photos/Nana Nani Adventure.jpg`,
+          alt: 'Nana & Nani on an outdoor adventure together',
+          label: 'Wherever the road led, they walked it together',
+        },
+        {
+          src: `${base}photos/MummyPapaPicture.jpg`,
+          alt: 'Formal portrait of Nana & Nani',
+          label: 'A lifetime of partnership and grace',
+        },
+      ],
     },
     {
-      src: `${base}photos/DSC_0468.JPG`,
-      alt: 'Nana — portrait',
+      heading: 'The Family Grows',
+      headingHindi: 'परिवार बढ़ता गया',
+      subtitle: 'Nana and Nani raised two perfect daughters — so close, so loving, that they brought two entire families together as one. The grandchildren started arriving, and the house filled with even more love.',
+      photos: [
+        {
+          src: `${base}photos/Nana and Aparna Family.JPG`,
+          alt: 'Nana & Nani with daughter Aparna and her family',
+          label: 'The family grows — Nana holding a newborn grandchild',
+        },
+        {
+          src: `${base}photos/Nana-Naman-2.JPG`,
+          alt: 'Nana sitting with young grandson Naman',
+          label: 'Always present — Nana with little Naman',
+        },
+        {
+          src: `${base}photos/DSCF0123.JPG`,
+          alt: 'Nana with a gentle smile, 2003',
+          label: 'That gentle smile — always warm, always steady (2003)',
+        },
+        {
+          src: `${base}photos/Nana-Naman.JPG`,
+          alt: 'Nana on the floor playing with toys with grandson Naman',
+          label: 'On the floor, in the moment — playing with his grandson',
+        },
+      ],
     },
     {
-      src: `${base}photos/DSCF0123.JPG`,
-      alt: 'Nana — candid moment',
+      heading: 'The Golden Years',
+      headingHindi: 'सुनहरे दिन',
+      subtitle: 'Grandkids growing up, card games on the bed, Christmas mornings, lake trips. He got on the floor to play, sat at the table to teach, and showed every grandchild what unconditional love looks like.',
+      photos: [
+        {
+          src: `${base}photos/Masti with Grandkids.JPG`,
+          alt: 'Nana & Nani playing cards on bed with grandkids',
+          label: 'Card games and laughter — masti with the grandkids',
+        },
+        {
+          src: `${base}photos/Nana Nani Naman Manan.JPG`,
+          alt: 'Nana & Nani with Naman and Manan by Christmas tree',
+          label: 'Christmas with Naman & Manan — memories that last forever',
+        },
+        {
+          src: `${base}photos/Nana and Grandkids.JPG`,
+          alt: 'Nana with grandkids by a lake',
+          label: 'Adventures with grandkids — by the lake',
+        },
+        {
+          src: `${base}photos/Nana Flowers.JPG`,
+          alt: 'Nana at a rose exhibition, 2013',
+          label: 'At the rose exhibition — a man who appreciated beauty (2013)',
+        },
+        {
+          src: `${base}photos/IMG_9435.JPG`,
+          alt: 'Nana & Nani sitting together',
+          label: 'Together always — the love never faded',
+        },
+      ],
+    },
+    {
+      heading: 'Family Together',
+      headingHindi: 'परिवार एक साथ',
+      subtitle: 'Two daughters, their families, grandchildren, elders — all together because of the closeness Nana and Nani cultivated. 50 years of love celebrated with the whole family.',
+      photos: [
+        {
+          src: `${base}photos/Bhopal Family.JPG`,
+          alt: 'Large family gathering in Bhopal',
+          label: 'The family he and Nani built — together in Bhopal',
+        },
+        {
+          src: `${base}photos/DSC_0174.JPG`,
+          alt: 'Extended family group photo',
+          label: 'Generations united — the closeness he cultivated',
+        },
+        {
+          src: `${base}photos/Nana Nani 50th Anniversary.JPG`,
+          alt: 'Nana & Nani cutting cake at their 50th wedding anniversary',
+          label: '50 years of love — anniversary celebration',
+        },
+        {
+          src: `${base}photos/DSC_0468.JPG`,
+          alt: 'Nana portrait in white shirt, 2015',
+          label: 'Quiet strength and grace (2015)',
+        },
+      ],
+    },
+    {
+      heading: 'The Last Chapter',
+      headingHindi: 'आख़िरी अध्याय',
+      subtitle: 'Still going strong. Still disciplined. Still kind. Still the most loving father and grandfather — right until the very end.',
+      photos: [
+        {
+          src: `${base}photos/DSC_0244.JPG`,
+          alt: 'Nana portrait with greenery, 2018',
+          label: 'Still going strong — disciplined as ever (2018)',
+        },
+        {
+          src: `${base}photos/Nana and Daughters.JPG`,
+          alt: 'Nana with his two adult daughters',
+          label: 'His greatest pride — two daughters who carry his values forward',
+        },
+        {
+          src: `${base}photos/IMG_2012.JPG`,
+          alt: 'Nana in patterned vest in the garden, 2021',
+          label: '84 years of a life beautifully lived (2021)',
+        },
+      ],
     },
   ];
 
@@ -799,13 +1004,21 @@ function Gallery() {
         <h2 className="section-title fade-in">Photos</h2>
         <p className="section-title-hindi fade-in">तस्वीरें</p>
 
-        <div className="gallery-grid fade-in">
-          {photos.map((photo, i) => (
-            <div className="gallery-item" key={i}>
-              <img src={photo.src} alt={photo.alt} loading="lazy" />
+        {sections.map((section, si) => (
+          <div className="gallery-section fade-in" key={si}>
+            <h3 className="gallery-section-title">{section.heading}</h3>
+            <p className="gallery-section-title-hindi">{section.headingHindi}</p>
+            <p className="gallery-section-subtitle">{section.subtitle}</p>
+            <div className={`gallery-grid${section.photos.length === 1 ? ' gallery-grid-single' : ''}${section.photos.length === 2 ? ' gallery-grid-pair' : ''}`}>
+              {section.photos.map((photo, pi) => (
+                <div className="gallery-item" key={pi}>
+                  <img src={photo.src} alt={photo.alt} loading="lazy" />
+                  <p className="gallery-label">{photo.label}</p>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
 
         <div className="gallery-links fade-in">
           <a
@@ -839,9 +1052,29 @@ function ImportantDates() {
             <div className="date-value">April 28, 2021</div>
           </div>
           <div className="date-card">
+            <div className="date-label">Chautha (4th Day)</div>
+            <div className="date-label-hindi">चौथा</div>
+            <div className="date-value">May 1, 2021</div>
+          </div>
+          <div className="date-card">
+            <div className="date-label">Daswan (10th Day)</div>
+            <div className="date-label-hindi">दसवां</div>
+            <div className="date-value">May 7, 2021</div>
+          </div>
+          <div className="date-card">
+            <div className="date-label">Tehrvi (13th Day)</div>
+            <div className="date-label-hindi">तेरहवीं</div>
+            <div className="date-value">May 10, 2021</div>
+          </div>
+          <div className="date-card">
             <div className="date-label">Barsi (1st Anniversary)</div>
             <div className="date-label-hindi">बरसी</div>
             <div className="date-value">April 28, 2022</div>
+          </div>
+          <div className="date-card">
+            <div className="date-label">Birthday</div>
+            <div className="date-label-hindi">जन्मदिन</div>
+            <div className="date-value">November 3</div>
           </div>
         </div>
 
