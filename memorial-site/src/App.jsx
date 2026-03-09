@@ -122,8 +122,6 @@ function Bio() {
     { label: 'Engineer', hindi: 'इंजीनियर' },
     { label: 'Teacher', hindi: 'शिक्षक' },
     { label: 'Athlete', hindi: 'खिलाड़ी' },
-    { label: 'Disciplined', hindi: 'अनुशासित' },
-    { label: 'Mentally Strong', hindi: 'मानसिक रूप से मज़बूत' },
   ];
 
   const personalityCards = [
@@ -157,6 +155,11 @@ function Bio() {
       hindi: 'खिलाड़ी',
       desc: 'Volleyball, hockey, cricket — sports were never optional. His volleyball serve could knock someone out. Physical fitness was a way of life.',
     },
+    {
+      label: 'Meticulous Record-Keeper',
+      hindi: 'सावधानीपूर्वक अभिलेखकर्ता',
+      desc: 'Maintained a handwritten family tree with every birth date, birth time, and marriage date. Kept a complete phone book of contacts, all by hand. Precision extended from the factory floor to the family diary.',
+    },
   ];
 
   return (
@@ -174,13 +177,13 @@ function Bio() {
           resilient person his family ever knew. Nothing shook him. He taught
           everyone around him not through speeches but through living: how to stay
           disciplined, how to face problems head-on, how to never take shortcuts.
-          A BITS Pilani graduate (1959) who spent his career at BHEL Bhopal building
-          India&rsquo;s infrastructure, he brought the same precision and integrity
-          to his family that he brought to his work.
+          Born in Mount Abu, Rajasthan, a BITS Pilani graduate in Electrical Engineering (1959)
+          who spent his career at BHEL Bhopal building India&rsquo;s infrastructure, he brought
+          the same precision and integrity to his family that he brought to his work.
         </p>
 
         <p className="bio-text bio-text-hindi fade-in">
-          वे पहले इंजीनियर बने, फिर पिता &mdash; और दोनों भूमिकाएँ उन्होंने
+          माउंट आबू, राजस्थान में जन्मे, वे पहले इंजीनियर बने, फिर पिता &mdash; और दोनों भूमिकाएँ उन्होंने
           जीवन भर पूरी निष्ठा से निभाईं। एक ऐसे व्यक्ति जो ज़्यादा
           बोलते नहीं थे, लेकिन अपने हर काम से सब कुछ दिखाते थे। सुबह जल्दी
           उठते, रोज़ व्यायाम करते, और अपनी दिनचर्या कभी नहीं तोड़ते &mdash;
@@ -190,6 +193,21 @@ function Bio() {
           सिखाया: अनुशासित कैसे रहें, समस्याओं का सामना कैसे करें, शॉर्टकट
           कभी न लें।
         </p>
+
+        <div className="bio-nicknames fade-in">
+          <span className="bio-nickname-label">Known As</span>
+          {[
+            { name: 'Bhargava Saab', context: 'at work' },
+            { name: 'Papa', context: 'by daughters' },
+            { name: 'Nana', context: 'by grandkids' },
+            { name: 'U.K.', context: 'initials' },
+            { name: 'Omi', context: 'childhood name' },
+          ].map((n) => (
+            <span className="bio-nickname-tag" key={n.name}>
+              {n.name} <span className="bio-nickname-context">{n.context}</span>
+            </span>
+          ))}
+        </div>
 
         <div className="bio-cards fade-in">
           {cards.map((card) => (
@@ -222,6 +240,8 @@ function Bio() {
 }
 
 function FamilyTree() {
+  const base = import.meta.env.BASE_URL;
+
   return (
     <section className="family-tree" id="family">
       <div className="section-inner">
@@ -301,6 +321,35 @@ function FamilyTree() {
             </div>
           </div>
         </div>
+
+        <div className="ft-artifacts fade-in">
+          <img
+            className="ft-artifact-image"
+            src={`${base}photos/Nana-Family-Tree-Handwritten.jpg`}
+            alt="Nana's handwritten family tree from his BHEL diary, January 1995"
+          />
+          <p className="ft-artifact-caption">
+            He recorded every birth date, birth time, and marriage date by hand in his BHEL diary
+          </p>
+          <div className="ft-artifact-links">
+            <a
+              href="https://drive.google.com/file/d/10yweuik17f-Zn6e6QwfKYJ00ZiECCuVC/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ft-artifact-link"
+            >
+              View Full Family Tree
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1Vw7D6h5XPx5yqQ04gDReqJ677D72JF0u/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ft-artifact-link"
+            >
+              View His Phone Book
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -308,6 +357,7 @@ function FamilyTree() {
 
 function IndiaMap() {
   const cities = [
+    { name: 'Mount Abu', x: 295, y: 365, primary: true },
     { name: 'Jaipur', x: 358, y: 330, primary: true },
     { name: 'Pilani', x: 370, y: 300 },
     { name: 'Bhopal', x: 420, y: 420, primary: true },
@@ -485,12 +535,12 @@ l30 31 -38 32 c-25 21 -46 31 -60 28 -13 -2 -29 3 -40 15 -18 20 -11 34 21 40
               cx={city.x}
               cy={city.y}
               r={city.primary ? 6 : 4}
-              fill={city.name === 'Bhopal' ? 'var(--gold)' : city.name === 'Jaipur' ? 'var(--sky-blue-deep)' : 'var(--navy)'}
+              fill={city.name === 'Bhopal' ? 'var(--gold)' : (city.name === 'Jaipur' || city.name === 'Mount Abu') ? 'var(--sky-blue-deep)' : 'var(--navy)'}
               opacity={city.primary ? 1 : 0.7}
             />
             <text
-              x={city.x + (city.name === 'Bhopal' ? 16 : 0)}
-              y={city.y - 12}
+              x={city.x + (city.name === 'Bhopal' ? 16 : city.name === 'Mount Abu' ? -16 : 0)}
+              y={city.y + (city.name === 'Mount Abu' ? 22 : -12)}
               textAnchor="middle"
               className="india-map-label"
               fill="var(--navy)"
@@ -510,21 +560,21 @@ function Timeline() {
   const stops = [
     {
       years: '1936',
-      city: 'Born',
-      desc: 'November 3rd, 1936. Born into a family that would shape a generation of Indian engineers.',
-      hindi: '3 नवंबर, 1936। एक ऐसे परिवार में जन्म जिसने भारतीय इंजीनियरों की एक पीढ़ी को आकार दिया।',
+      city: 'Born — Mount Abu, Rajasthan',
+      desc: 'November 3rd, 1936. Born in Mount Abu into a family that would shape a generation of Indian engineers. Moved to Jaipur mid-5th grade, lived near Hawa Mahal.',
+      hindi: '3 नवंबर, 1936। माउंट आबू में जन्म, एक ऐसे परिवार में जिसने भारतीय इंजीनियरों की एक पीढ़ी को आकार दिया। पाँचवीं कक्षा के बीच में जयपुर चले गए, हवा महल के पास रहे।',
     },
     {
-      years: '~1955',
+      years: '1951–1955',
       city: 'Maharaja College, Jaipur',
-      desc: 'Early education in Jaipur. Sports, mathematics, volleyball. A strict principal who taught math through humor and engagement.',
-      hindi: 'जयपुर में प्रारंभिक शिक्षा। खेलकूद, गणित, वॉलीबॉल। एक सख्त प्रधानाचार्य जो हास्य और जुड़ाव के माध्यम से गणित पढ़ाते थे।',
+      desc: 'Education at Maharaja College with 4,000 students. Sports, mathematics, volleyball. The Principal\'s legendary calculus class — he taught math through humor and engagement.',
+      hindi: 'महाराजा कॉलेज में शिक्षा, 4,000 छात्रों के साथ। खेलकूद, गणित, वॉलीबॉल। प्रधानाचार्य की प्रसिद्ध कैलकुलस कक्षा — हास्य और जुड़ाव के माध्यम से गणित पढ़ाते थे।',
     },
     {
-      years: '1958–1959',
+      years: '1955–1959',
       city: 'BITS Pilani',
-      desc: 'Engineering degree at Birla Institute of Technology and Science. Hostel life with 144 students, hands-on training on lathes and milling machines, mandatory sports, lifelong friendships.',
-      hindi: 'बिर्ला इंस्टीट्यूट ऑफ टेक्नोलॉजी एंड साइंस में इंजीनियरिंग की डिग्री। 144 छात्रों के साथ हॉस्टल जीवन, लेथ और मिलिंग मशीनों पर प्रशिक्षण, अनिवार्य खेल, आजीवन मित्रता।',
+      desc: 'Electrical Engineering degree at Birla Institute of Technology and Science. Hostel life with 144 students, hands-on training on lathes and milling machines, mandatory sports, lifelong friendships. The Central Research Institute opened in his 3rd year.',
+      hindi: 'बिर्ला इंस्टीट्यूट ऑफ टेक्नोलॉजी एंड साइंस में इलेक्ट्रिकल इंजीनियरिंग की डिग्री। 144 छात्रों के साथ हॉस्टल जीवन, लेथ और मिलिंग मशीनों पर प्रशिक्षण, अनिवार्य खेल, आजीवन मित्रता। तीसरे वर्ष में सेंट्रल रिसर्च इंस्टीट्यूट खुला।',
     },
     {
       years: '1959+',
@@ -535,8 +585,8 @@ function Timeline() {
     {
       years: 'Various',
       city: 'Field Assignments',
-      desc: 'Hyderabad, Ankleshwar, Hazaribagh, UP, Pune — cathodic protection, pipeline work, traction systems across India.',
-      hindi: 'हैदराबाद, अंकलेश्वर, हज़ारीबाग, यूपी, पुणे — कैथोडिक प्रोटेक्शन, पाइपलाइन कार्य, पूरे भारत में ट्रैक्शन सिस्टम।',
+      desc: 'Hyderabad, Ankleshwar, Hazaribagh, UP, Pune, Ooty — cathodic protection, pipeline work, traction systems across India.',
+      hindi: 'हैदराबाद, अंकलेश्वर, हज़ारीबाग, यूपी, पुणे, ऊटी — कैथोडिक प्रोटेक्शन, पाइपलाइन कार्य, पूरे भारत में ट्रैक्शन सिस्टम।',
     },
     {
       years: '1980s',
@@ -545,7 +595,7 @@ function Timeline() {
       hindi: 'भारत के स्वदेशी टैंक के असेंबली समन्वयक। 10,000 ड्रॉइंग की समीक्षा, 7,000-8,000 पुर्जों का समन्वय, 2 प्रोटोटाइप असेंबल किए। महत्वपूर्ण डिज़ाइन दोषों की पहचान।',
     },
     {
-      years: '~6 months',
+      years: '~4 months',
       city: 'United Kingdom',
       desc: 'International experience working on traction control systems. Exposure to different engineering approaches and international best practices.',
       hindi: 'ट्रैक्शन कंट्रोल सिस्टम पर काम करते हुए अंतर्राष्ट्रीय अनुभव। विभिन्न इंजीनियरिंग दृष्टिकोण और अंतर्राष्ट्रीय सर्वोत्तम प्रथाओं से परिचय।',
@@ -733,6 +783,21 @@ function Stories() {
       hindi: 'बिना झाड़ू का कमरा',
       desc: 'Bachelor days in Pune: a 10×12 ft room, swept once in six months. "There was simply no thought process about surroundings — the focus was entirely on work."',
     },
+    {
+      title: 'Gamboots & Rainy Season',
+      hindi: 'गमबूट और बारिश का मौसम',
+      desc: 'During monsoon, gamboots were essential for walking through the flooded BHEL campus. In the evenings, food huts would set up right in front of BHEL — a ritual everyone looked forward to.',
+    },
+    {
+      title: 'Vishwakarma Day',
+      hindi: 'विश्वकर्मा दिवस',
+      desc: 'Every year at BHEL, the machines received a pooja on Vishwakarma Day — the annual tools ceremony honoring the god of craftsmen. The entire factory floor would stop to pay respect to the machines that built India.',
+    },
+    {
+      title: 'The Monday Holiday',
+      hindi: 'सोमवार की छुट्टी',
+      desc: 'BHEL Training School ran 7am to 4pm with Monday off instead of Sunday. In the common room, it was table tennis alongside bridge, carrom, and chess — the competitive spirit never stopped.',
+    },
   ];
 
   return (
@@ -824,7 +889,7 @@ function Values() {
             &ldquo;लेथ, मिलिंग मशीन, ड्रिल प्रेस &mdash; हाथ से काम करके सीखा।&rdquo;
           </div>
           <p className="values-quote-english">
-            Worked on lathes, milling machines, drill presses. Experience teaches what textbooks cannot.
+            At BHEL Training School, machine training was compulsory — 7am to 4pm, Mondays off. Worked on lathes, milling machines, drill presses. Every year, Vishwakarma Day honoured the machines with a pooja. Experience teaches what textbooks cannot.
           </p>
         </div>
 
