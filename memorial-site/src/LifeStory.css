@@ -10,7 +10,7 @@
   z-index: 100;
   background: rgba(250, 248, 245, 0.95);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(180, 213, 224, 0.3);
+  border-bottom: 1px solid rgba(221, 208, 190, 0.3);
   box-shadow: 0 2px 20px rgba(44, 62, 90, 0.06);
 }
 
@@ -70,8 +70,8 @@
   color: var(--navy-light);
   padding: 0.3rem 0.7rem;
   border-radius: 5px;
-  background: rgba(180, 213, 224, 0.15);
-  border: 1px solid rgba(180, 213, 224, 0.25);
+  background: rgba(221, 208, 190, 0.15);
+  border: 1px solid rgba(221, 208, 190, 0.25);
   transition: all 0.2s ease;
   white-space: nowrap;
 }
@@ -283,7 +283,7 @@
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
   background: var(--cream);
-  border: 1px solid rgba(180, 213, 224, 0.3);
+  border: 1px solid rgba(221, 208, 190, 0.3);
   border-radius: 8px;
   font-size: 0.9rem;
   font-weight: 500;
