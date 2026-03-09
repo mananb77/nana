@@ -153,12 +153,27 @@ function Bio() {
     {
       label: 'Athlete',
       hindi: 'खिलाड़ी',
-      desc: 'Volleyball, hockey, cricket — sports were never optional. His volleyball serve could knock someone out. Physical fitness was a way of life.',
+      desc: 'Played sports every evening without fail. Volleyball, hockey, cricket — sports were never optional. His volleyball serve could knock someone out. Physical fitness was a way of life.',
     },
     {
       label: 'Meticulous Record-Keeper',
       hindi: 'सावधानीपूर्वक अभिलेखकर्ता',
       desc: 'Maintained a handwritten family tree with every birth date, birth time, and marriage date. Kept a complete phone book of contacts, all by hand. Precision extended from the factory floor to the family diary.',
+    },
+    {
+      label: 'Quiet Introvert',
+      hindi: 'शांत अंतर्मुखी',
+      desc: 'An introverted man who let his actions speak. He didn\'t seek attention or fill rooms with words — but his quiet presence was the most reassuring force in any room.',
+    },
+    {
+      label: 'Sharp Memory & Focus',
+      hindi: 'तीक्ष्ण स्मृति और एकाग्रता',
+      desc: 'Super intelligent with an amazing memory. He planned and calculated everything. Once focused, he never lost his train of thought — a mind as precise as the machines he built.',
+    },
+    {
+      label: 'Lover of Simple Pleasures',
+      hindi: 'सादगी के प्रेमी',
+      desc: 'He loved moong dal, gardens, museums, and exploring new places. Adventure was always welcome. The simplest things brought him the greatest joy.',
     },
   ];
 
@@ -573,7 +588,7 @@ function Timeline() {
     {
       years: '1955–1959',
       city: 'BITS Pilani',
-      desc: 'Electrical Engineering degree at Birla Institute of Technology and Science. Hostel life with 144 students, hands-on training on lathes and milling machines, mandatory sports, lifelong friendships. The Central Research Institute opened in his 3rd year.',
+      desc: 'Electrical Engineering degree at Birla Institute of Technology and Science. Hostel life with 144 students, hands-on training on lathes and milling machines, mandatory sports every evening, lifelong friendships. Professors followed a self-discovery teaching philosophy — "I will not tell you that this is like this" — expecting students to figure things out themselves. The Central Research Institute opened in his 3rd year.',
       hindi: 'बिर्ला इंस्टीट्यूट ऑफ टेक्नोलॉजी एंड साइंस में इलेक्ट्रिकल इंजीनियरिंग की डिग्री। 144 छात्रों के साथ हॉस्टल जीवन, लेथ और मिलिंग मशीनों पर प्रशिक्षण, अनिवार्य खेल, आजीवन मित्रता। तीसरे वर्ष में सेंट्रल रिसर्च इंस्टीट्यूट खुला।',
     },
     {
@@ -680,6 +695,11 @@ function Quotes() {
       english: '"If a component is made well, the painting on it will also look good."',
       context: 'On quality at the foundation — get the base right and everything else follows',
     },
+    {
+      hindi: '"नानी जो यात्रा कर रही हैं वो उनकी है। हम बस अपना हिस्सा कर सकते हैं।"',
+      english: '"The journey Nani is going through is hers. We can only do our part."',
+      context: 'On compassion and acceptance — spoken about Nani\'s health journey',
+    },
   ];
 
   return (
@@ -756,7 +776,7 @@ function Stories() {
     {
       title: 'The Mango Pit Prank',
       hindi: 'आम की गुठली का मज़ाक',
-      desc: 'Blew air into 101 mango pits and arranged them on a table. When people rushed to grab what looked like fresh mangoes, they discovered the deception. It became a legendary campus joke.',
+      desc: 'Ate the mangoes, then blew air into 10–12 mango pits to inflate them like little balloons and left them arranged outside. When people rushed to grab what looked like fresh mangoes, they discovered the deception. It became a legendary campus joke.',
     },
     {
       title: 'The End-of-World Feast',
@@ -771,12 +791,12 @@ function Stories() {
     {
       title: 'The Disappearing Snacks',
       hindi: 'गायब होते नाश्ते',
-      desc: 'Hostel rooms divided by wire mesh walls. When someone received a care package from home, coordinated raids ensured everything was shared — and finished — together.',
+      desc: 'Hostel rooms were just 8×8ft each — two rooms on each side of a gallery hallway, divided by jali (cemented lattice) walls so you could hear the person next door. A thakhat for sleeping, an almari for books, a table, and a chair. When someone received a care package from home, coordinated raids ensured everything was shared — and finished — together.',
     },
     {
       title: 'The 30-Paratha Record',
       hindi: '30 पराठों का रिकॉर्ड',
-      desc: 'One student ate 30 aloo parathas in a single sitting — a hostel record. Average potato consumption per person was half a kilogram. Potatoes were universally beloved.',
+      desc: 'Food came in pressed thalis, 15–16 people per table on benches. Rotis were made on a 4-foot diameter thava — 300 people\'s food cooked in 30 minutes. Each roti got a stamp of ghee, and everyone ate 15–20 rotis per meal. Ghee went into the dal too. One student ate 30 aloo parathas in a single sitting — a hostel record. Average potato consumption: half a kilo per person per day. And the laddoos were 3 inches across.',
     },
     {
       title: 'The Unswept Room',
@@ -797,6 +817,16 @@ function Stories() {
       title: 'The Monday Holiday',
       hindi: 'सोमवार की छुट्टी',
       desc: 'BHEL Training School ran 7am to 4pm with Monday off instead of Sunday. In the common room, it was table tennis alongside bridge, carrom, and chess — the competitive spirit never stopped.',
+    },
+    {
+      title: 'Nana at Home',
+      hindi: 'घर पर नाना',
+      desc: 'He cooked garam pani and saac, and always fed Nani first. He managed all her medicines and medical reports. Financial planning was meticulous — BHEL paperwork, selling shares, always planned 5 years ahead. The soap bottle was never empty, every container always full. He took out the trash, tended the garden, vacuumed the house. Before lockdown, gajak packets were sent out by April 10th. He even taught many people how to order things online.',
+    },
+    {
+      title: 'The Maruti Suzuki',
+      hindi: 'मारुति सुज़ुकी',
+      desc: 'His beloved car with its manual steering wheel. He cleaned the car himself — windows washed, everything spotless. And when the time came, he was the one who approved Mummy\'s driving.',
     },
   ];
 
