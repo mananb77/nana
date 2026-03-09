@@ -92,6 +92,9 @@ function Hero() {
           <a href="https://youtu.be/Xd5GJCP_Imk?si=FH3-Zq1sNYO8K-st" target="_blank" rel="noopener noreferrer" className="hero-link">
             &#9654; Watch Life Story Video
           </a>
+          <a href="https://docs.google.com/presentation/d/1zLZF1dDYK6uexpDtZE9mHDfzbDHb1cDCgwQRI0yI_X0/edit" target="_blank" rel="noopener noreferrer" className="hero-link">
+            Life Story Slides
+          </a>
           <a
             href={`https://wa.me/?text=${encodeURIComponent('In loving memory of Umakant Bhargava (1936–2021). A life of precision, integrity, and quiet strength.\n\nhttps://mananb77.github.io/nana/')}`}
             target="_blank"
